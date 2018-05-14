@@ -33,15 +33,15 @@ apis:
   properties:
   - type: x-openapi-spec
     url: https://raw.githubusercontent.com/streamdata-gallery-topics/things/master/_listings/aws-internet-of-things/action-updatething-get.md
-- name: AWS Internet of Things API Describe Thing
-  description: Gets information about the specified thing.
+- name: AWS Internet of Things API List Principal Things
+  description: Lists the things associated with the specified principal.
   image: http://kinlane-productions.s3.amazonaws.com/api-evangelist-site/company/logos/Internet-Of-Things_AWSIoT.png
   humanURL: https://aws.amazon.com/iot-platform/
   baseURL: http:://{host}//
   tags: Things
   properties:
   - type: x-openapi-spec
-    url: https://raw.githubusercontent.com/streamdata-gallery-topics/things/master/_listings/aws-internet-of-things/action-describething-get.md
+    url: https://raw.githubusercontent.com/streamdata-gallery-topics/things/master/_listings/aws-internet-of-things/action-listprincipalthings-get.md
 x-common:
 - type: x-blog
   url: https://aws.amazon.com/iot-platform/developer-resources/#Blog
