@@ -1,8 +1,9 @@
 ---
 swagger: "2.0"
 info:
-  title: AWS Internet of Things API
+  title: AWS Internet of Things API List Principal Things
   version: 1.0.0
+  description: Lists the things associated with the specified principal.
 schemes:
 - http
 produces:
