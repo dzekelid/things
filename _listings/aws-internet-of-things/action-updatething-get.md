@@ -1,8 +1,9 @@
 ---
 swagger: "2.0"
 info:
-  title: AWS Internet of Things API
+  title: AWS Internet of Things API Update Thing
   version: 1.0.0
+  description: Updates the data for a thing.
 schemes:
 - http
 produces:
