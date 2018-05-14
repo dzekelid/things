@@ -1,8 +1,9 @@
 ---
 swagger: "2.0"
 info:
-  title: AWS Internet of Things API
+  title: AWS Internet of Things API Create Thing
   version: 1.0.0
+  description: Creates a thing record in the thing registry.
 schemes:
 - http
 produces:
