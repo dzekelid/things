@@ -74,31 +74,6 @@ paths:
           description: OK
       tags:
       - Things
-  /?Action=ListPrincipalThings:
-    get:
-      summary: List Principal Things
-      description: Lists the things associated with the specified principal.
-      operationId: listPrincipalThings
-      x-api-path-slug: actionlistprincipalthings-get
-      parameters:
-      - in: query
-        name: maxResults
-        description: The maximum number of results to return in this operation
-        type: string
-      - in: query
-        name: nextToken
-        description: The token for the next set of results, or null if there are no
-          additional results
-        type: string
-      - in: query
-        name: principal
-        description: The principal
-        type: string
-      responses:
-        200:
-          description: OK
-      tags:
-      - Principal Things
   /?Action=ListThings:
     get:
       summary: List Things
@@ -165,6 +140,185 @@ paths:
           description: OK
       tags:
       - Things
+  /?Action=AttachThingPrincipal:
+    get:
+      summary: Attach Thing Principal
+      description: Attaches the specified principal to the specified thing.
+      operationId: attachThingPrincipal
+      x-api-path-slug: actionattachthingprincipal-get
+      parameters:
+      - in: query
+        name: principal
+        description: The principal, such as a certificate or other credential
+        type: string
+      - in: query
+        name: thingName
+        description: The name of the thing
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Thing Principals
+  /?Action=DetachThingPrincipal:
+    get:
+      summary: Detach Thing Principal
+      description: Detaches the specified principal from the specified thing.
+      operationId: detachThingPrincipal
+      x-api-path-slug: actiondetachthingprincipal-get
+      parameters:
+      - in: query
+        name: principal
+        description: If the principal is a certificate, this value must be ARN of
+          the certificate
+        type: string
+      - in: query
+        name: thingName
+        description: The name of the thing
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Thing Principals
+  /?Action=ListThingPrincipals:
+    get:
+      summary: List Thing Principals
+      description: Lists the principals associated with the specified thing.
+      operationId: listThingPrincipals
+      x-api-path-slug: actionlistthingprincipals-get
+      parameters:
+      - in: query
+        name: thingName
+        description: The name of the thing
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Thing Principals
+  /?Action=CreateThingType:
+    get:
+      summary: Create Thing Type
+      description: Creates a new thing type.
+      operationId: createThingType
+      x-api-path-slug: actioncreatethingtype-get
+      parameters:
+      - in: query
+        name: thingTypeName
+        description: The name of the thing type
+        type: string
+      - in: query
+        name: thingTypeProperties
+        description: The ThingTypeProperties for the thing type to create
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Thing Types
+  /?Action=DeleteThingType:
+    get:
+      summary: Delete Thing Type
+      description: Deletes the specified thing type.
+      operationId: deleteThingType
+      x-api-path-slug: actiondeletethingtype-get
+      parameters:
+      - in: query
+        name: thingTypeName
+        description: The name of the thing type
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Thing Types
+  /?Action=DeprecateThingType:
+    get:
+      summary: Deprecate Thing Type
+      description: Deprecates a thing type.
+      operationId: deprecateThingType
+      x-api-path-slug: actiondeprecatethingtype-get
+      parameters:
+      - in: query
+        name: thingTypeName
+        description: The name of the thing type to deprecate
+        type: string
+      - in: query
+        name: undoDeprecate
+        description: Whether to undeprecate a deprecated thing type
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Thing Types
+  /?Action=DescribeThingType:
+    get:
+      summary: Describe Thing Type
+      description: Gets information about the specified thing type.
+      operationId: describeThingType
+      x-api-path-slug: actiondescribethingtype-get
+      parameters:
+      - in: query
+        name: thingTypeName
+        description: The name of the thing type
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Thing Types
+  /?Action=ListThingTypes:
+    get:
+      summary: List Thing Types
+      description: Lists the existing thing types.
+      operationId: listThingTypes
+      x-api-path-slug: actionlistthingtypes-get
+      parameters:
+      - in: query
+        name: maxResults
+        description: The maximum number of results to return in this operation
+        type: string
+      - in: query
+        name: nextToken
+        description: The token for the next set of results, or null if there are no
+          additional results
+        type: string
+      - in: query
+        name: thingTypeName
+        description: The name of the thing type
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Thing Types
+  /?Action=ListPrincipalThings:
+    get:
+      summary: List Principal Things
+      description: Lists the things associated with the specified principal.
+      operationId: listPrincipalThings
+      x-api-path-slug: actionlistprincipalthings-get
+      parameters:
+      - in: query
+        name: maxResults
+        description: The maximum number of results to return in this operation
+        type: string
+      - in: query
+        name: nextToken
+        description: The token for the next set of results, or null if there are no
+          additional results
+        type: string
+      - in: query
+        name: principal
+        description: The principal
+        type: string
+      responses:
+        200:
+          description: OK
+      tags:
+      - Principal Things
 x-streamrank:
   polling_total_time_average: 0
   polling_size_download_average: 0
